@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Barras de progreso</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row mt-3">
+			<div class="col-6">
+				<h3>Barras de Progreso</h3>
+				<hr>
+
+				<!--contenedor de la barra-->
+				<div class="progress mb-3">
+					<!--barra propiamente-->
+					<!--el width indica el progreso-->
+					<!--el line heigth indica el ancho del texto (numero)-->
+					<div class="progress-bar" 
+						role="progressbar" 
+						style="width:0%; height: 25px; line-height: 25px;">
+					0%</div>
+				</div>
+
+				<div class="progress mb-3">
+
+					<div class="progress-bar" 
+							role="progressbar" 
+							style="width:50%; height: 20px; line-height: 10px;">50%</div>
+				</div>
+
+				<div class="progress mb-3">
+					<div class="progress-bar" 
+						role="progressbar" 
+						style="width:100%; height: 50px; line-height: 50px;">100%</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--barras con colores-->
+		<div class="row">
+
+			<div class="col">
+				<div class="progress mb-3">
+					<div class="progress-bar bg-primary" 
+					role="progressbar" 
+					style="width: 50%; height: 30px; line-height: 30px;">50%</div>
+				</div>
+
+				<div class="progress mb-3">
+					<div class="progress-bar bg-success" 
+						role="progressbar" 
+						style="width: 50%; height: 30px; line-height: 30px;">50%</div>
+				</div>
+
+				<div class="progress mb-3">
+					<div class="progress-bar bg-info"
+					 role="progressbar" 
+					 style="width: 50%; height: 30px; line-height: 30px;">50%</div>
+				</div>
+
+				<div class="progress mb-3">
+					<div class="progress-bar bg-warning" 
+					role="progressbar" 
+					style="width: 50%; height: 30px; line-height: 30px;">50%</div>
+				</div>
+
+				<div class="progress mb-3">
+					<div class="progress-bar bg-danger" 
+					role="progressbar" 
+					style="width: 50%; height: 30px; line-height: 30px;">50%</div>
+				</div>
+			</div>
+
+			<!-- en movimento-->
+
+			<div class="col">
+
+				<!--con .stipped añadimos las lineas verticales
+				con .animated las animamos -->
+				<div class="progress mb-3">
+					<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" 
+						role="progressbar" 
+						style="width: 50%; height: 40px; line-height: 30px;">50%</div>
+				</div>
+
+				<div class="progress mb-3">
+					<div class="progress-bar progress-bar-striped progress-bar-animated bg-success" 
+						role="progressbar" 
+						style="width: 50%; height: 30px; line-height: 30px;">50%</div>
+				</div>
+
+				<div class="progress mb-3">
+					<div class="progress-bar progress-bar-striped progress-bar-animated bg-info" 
+					role="progressbar" style="width: 50%; height: 30px; line-height: 30px;">50%</div>
+				</div>
+
+				<div class="progress mb-3">
+					<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 50%; height: 30px; line-height: 30px;">50%</div>
+				</div>
+
+				<div class="progress mb-3">
+					<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 50%; height: 30px; line-height: 30px;">50%</div>
+				</div>
+
+				<div class="progress mb-3">
+					<div class="progress-bar progress-bar-striped progress-bar-animated bg-inverse" role="progressbar" style="width: 50%; height: 30px; line-height: 30px;">50%</div>
+				</div>
+
+				<div class="progress mb-3">
+					<div class="progress-bar progress-bar-striped progress-bar-animated bg-faded" role="progressbar" style="width: 50%; height: 30px; line-height: 30px;">50%</div>
+				</div>
+
+				<!--nueva actualizacion:-->
+
+				<div class="progress mb-3">
+						<div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+
+				<!--controlando el tamaño-->
+
+				<!--delgada-->
+				<div class="progress mb-3" style="height: 1px;">		
+					<div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+
+				<!--grande-->
+				<div class="progress mb-3" style="height: 20px;">
+					<div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+				 </div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="../jquery/jquery-3.3.1.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

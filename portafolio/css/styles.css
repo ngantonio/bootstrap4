@@ -1,0 +1,256 @@
+body{
+    background: #f2f2f2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    margin-top: 30px;
+}
+header .nav{
+    min-height: 80px;
+    overflow: hidden;
+    background: #ffff;
+}
+/*Logo*/
+
+header .logo h2,
+header .logo span,
+header .logo p{
+    font-size: 16px;
+    display: inline-block;
+    margin: 0;
+}
+
+header .logo h2{
+    font-weight: 800;
+}
+
+header .logo .color{
+    color: #bfbfbf;
+}
+header .logo p{
+  color: #777777
+}
+
+/*menú*/
+header .menu{
+    padding: 0;
+}
+
+header .menu a{
+    display: block;
+    text-decoration: none;
+    padding: 0 30px;
+    color: #ffff;
+}
+
+header .menu a div span{
+  font-weight: 600;
+}
+
+/*iconos*/
+
+.color-1{background: #3da5e2;}
+.color-2{background: #005385;}
+.color-3{background:  #003855;}
+
+.color-1:hover{background: #1ba0ef}
+.color-2:hover{background: #00426a;}
+.color-3:hover{background:  #002d44;}
+
+/*Portafolio*/
+
+.portafolio{
+    background: #ffffff;
+    border-top: 5px solid #3da5e2;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.titulo-portafolio{
+
+    padding:  40px 0;
+    text-align: center;
+    color: #3da5e2;
+    font-weight: 300;
+}   
+
+.contenedor-img{
+    /*cada contenedor tiene una separacion de 40px abajo*/
+    margin-bottom: 40px;
+    /*cada contenedortendrá un alto maximo, de esta 
+    manera, las imagenes no pareceran salirse de su contenedor */
+    max-height: 180px;
+    /*si la imagen es mas larga que ese ancho, se ocultara con esta propiedad*/
+    overflow: hidden;
+
+}
+
+/*efecto de hover*/
+
+/*le cambiamos el fondo a negro*/
+.contenedor-img a{
+    display: inline-block;
+    background: #000000;   
+}
+
+/*al hacer hover, le bajamos la opacidad directamente a la imagen*/
+.contenedor-img:hover img{
+    opacity: .4;
+} 
+
+/*About*/
+
+.about{
+    padding: 30px;
+    margin-bottom: 40px
+}
+
+.about img{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.nombre{
+    color: #545454;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.titulo{
+    color: #005385;
+    font-weight: 300;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.resumen{
+    letter-spacing: 1px;  
+}
+.label{
+    font-size: 18px;
+    font-weight: 600;
+    color: #005385;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.progress{
+    background: #005385;
+    border-radius: 0;
+    margin-bottom: 15px;
+}
+.progress-bar{
+    height: 20px;
+    background: #3da5e2;
+    line-height: 25px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/*contacto y formulario*/
+.contacto{
+    padding: 40px 0;
+    border-top: solid #cbcbcb;
+    margin-bottom: 40px;
+}
+
+.contacto .titulo{
+    text-align: center;
+}
+
+.form-group{
+    margin-bottom: 0;
+}
+
+.formulario input[type='text'],
+.formulario input[type='email'],
+.formulario textarea{
+    padding: 15px;
+    border: none;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.formulario textarea{
+    min-height: 150px;
+    max-height: 250px;
+}
+
+.boton{
+    background: #3da5e2;
+    border: none;
+    padding: 7px 30px;
+    color: #fff;
+    cursor: pointer;
+    width: auto;
+    border-radius: 3px;
+}
+.boton:hover{
+    background: #1da0ef;
+}
+
+/*footer y redes*/
+
+.redes{
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+.redes .icono{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    
+    /*font-size: 40px;
+    line-height: 100px;
+    color: #fff;
+    text-align: center;
+    background: #cbcbcb;
+    margin: 0 20px;
+    text-decoration: none;
+    border-radius: 100px;
+    transition: all .3s ease;*/
+}
+
+.twitter{background: #1da1f2;}
+.instagram{background: #833ab4;}
+.facebook{background: #3b5998;}
+
+/*Media Queries para dispositivos moviles*/
+/*los tamaños de pantalla son a partir de*/
+
+/* xl*/
+@media screen and (max-width: 1199px){}
+
+/* dispositivos lg*/
+@media screen and (max-width: 991px){
+    .logo{ height: 60px;}  
+    .menu{min-height: 60px}
+    /*el ancho de del menu se divide entre los elementos*/
+    .menu a{width:100%} 
+    .menu a div{width:100%}
+
+    /*seleccionamos cada elemento de contenedor de imagen para reordenar su pocision*/
+    .galeria .contenedor-img:nth-child(1){order:1; }
+    .galeria .contenedor-img:nth-child(2){order:3; }
+    .galeria .contenedor-img:nth-child(3){order:6; }
+    .galeria .contenedor-img:nth-child(4){order:2; }
+    .galeria .contenedor-img:nth-child(5){order:5; }
+    .galeria .contenedor-img:nth-child(6){order:4; }
+    .galeria .contenedor-img:nth-child(7){order:7; }
+
+    /*al presentar als imagenes en el modal, estas se ajusten al tamaño de la pantalla*/
+    .modal-dialog{ width: 90%}
+    .modal-content{ width: 100%}
+}
+
+/*dispositivos medianos*/
+@media screen and(max-width: 767px){}
+
+/*dispositivos pequeños*/
+@media screen and(max-width: 575px){
+    header{margin-top: 0; text-align: center;}
+    /*fuente mas pequeña*/
+    header .logo h2, header .logo p{ font-size: 12px;}
+}
+

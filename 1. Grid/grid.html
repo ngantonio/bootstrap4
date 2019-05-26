@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!--estilos de bootstrap-->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <title>Grid</title>
+	<style>
+		.row > div {
+			background: #f2f2f2;
+			margin:10px 0;
+		}
+	</style>
+</head>
+<body>
+	<!-- El container es el contenedor principal, en el iran todas las filas y columnas -->
+	<!-- Con el container podemos centrar nuestra pagina -->
+	<div class="container">
+		<!-- Las filas (row) son grupos HORIZONTALES de columnas-->
+		<div class="row">
+			<!-- Todo el contenido debe ir dentro de columnas (col) -->
+			<!-- Y las columnas deben ir directamente dentro de las filas (row) -->
+
+			<!-- NUEVO:
+					Los tamaños de Columna en Bootsrap 4 son:
+					.col 		Extra Pequeño (Extra Small) - Smartphones Vertical		Menos de 544px
+					.col-sm 	Pequeño (Small) - Smartphones Vertical	 				Mas de 544px y Menos de 768px
+					.col-md 	Mediano (Medium) - Tablets 								Mas de 768px y Menos de 992px
+					.col-lg 	Largo (Large) - Computadoras							Mas de 992px y Menos de 1200px
+					.col-xl 	Extra Largo (Extra Large) - Computadoras				Mas de 1200px
+             -->
+             
+             <!--Estas dos, abarcan en su tamaño extra pequeño, 12 cols, a partir de un tamaño
+                pequeño, se dividen y cada una abarca 6, y en un tamaño mediano en adelante 
+                (grande o extra grande), abarca todo lo que puedan abarcar (automatico) 
+                pero que tambien serian 6-->
+            
+                <div class="col-12 col-sm-6 col-md">
+				<h1>Hola Mundo</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+
+			<div class="col-12 col-sm-6 col-md">
+				<h1>Hola Mundo</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+
+            <!--este div en un tamaño extra-pequeño en adelante abarca 12, al igual que las dos de arriba
+                pero, en un tamaño pequeño abarca el espacio automatico, esto lo que hace es que
+             como las dos de arriba abarcan en su tamaño pequeño 6 (juntas forman 12), 
+             a este div no le queda otra que hacer un salto de linea y abarcar todo el ancho automatico (12) 
+            
+            pero,
+            
+            como los tres, en su tamaño mediano en adelante (md -lg- xl..), estan de forma automatica,
+            se calcular una proporcion adecuada de la pantalla, para que, en su tamaño mediano, cada una
+            abarque 4, formando asi, las 12 columnas 
+        
+            si a este div, le colocamos,col-lg-12, cuando esté en su version de escritorio,
+             las dos de arriba abarcaran cada una 6,y este hara un salto de linea, para abarcar 12-->
+
+			<div class="col-12 col-sm col-md col-lg-12">
+				<h1>Hola Mundo</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+	</div>
+    <!--jquery de bootstrap-->
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <!--jquery-->
+    <script src="../jquery/jquery-3.3.1.min.js"></script>
+</body>
+</html>

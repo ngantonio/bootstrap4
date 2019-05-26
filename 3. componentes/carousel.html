@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Carousel</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-12 mt-3">
+				<!--Agregamos la clase carrousel slide, para indicarle a bootstrap que abriremos un carousel-->
+					
+				<div id="principal-carousel" class="carousel slide" data-ride="carousel">
+					
+					<!--Agregamos una lista ordenada con la clase carousel-indicators, dentro de la cual 
+						vamos a colocar un itemList como tantas imagenes o elementos items tengamos, cada uno
+						haciendo referencia al id del div contenedor del carousel.
+					
+					Estas seran los botoncitos o barritas que aparecen debajo de cada imagen para la transicion
+					cada uno de los numeros en el tag data-slide-to, representan la posicion de la imagen
+					segun el orden definido en el div de abajo-->
+					
+					<ol class="carousel-indicators">
+						<li data-target="#principal-carousel" data-slide-to="0" class="active"></li>
+						<li data-target="#principal-carousel" data-slide-to="1"></li>
+						<li data-target="#principal-carousel" data-slide-to="2"></li>
+					</ol>
+
+
+					<!--Con la clase carousel-inner, envolvemos a todos los items o imagenes
+					que se mostraran en el slideshow-->
+					<div class="carousel-inner">
+						<!--Con la clase carousel-item controlamos cada uno de los items (imagenes) de forma individual-->
+						<div class="carousel-item active">
+							<img class="d-block w-100" src="../img/carousel1.jpg" alt="First slide">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="../img/carousel2.jpg" alt="Second slide">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="../img/carousel3.jpg" alt="Third slide">
+						</div>
+					</div>
+
+					<!--Finalmente, creamos los controles, que son enlaces a, que acceden al elemento cuyo id
+					es el id principal del carousel (el data-target) con la clase correspondiente a la accion  de prev o next 
+				
+					el span con la clase sr-only, con el texto, se mostrará cuando nos encontremos en una tablet de solo
+					lectura-->
+
+					<a class="carousel-control-prev" href="#principal-carousel" role="button" data-slide="prev">
+						<!--Agregamos el icono de la flecha-->
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+
+					<a class="carousel-control-next" href="#principal-carousel" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+		<!--Carousel con texto:-->
+
+		<div class="row mt-3">
+			<div class="col-12 mt-4">
+
+				<div id="secondary-carousel" class="carousel slide" data-ride="carousel">
+			
+					<ol class="carousel-indicators">
+							<li data-target="#secondary-carousel" data-slide-to="0" class="active"></li>
+							<li data-target="#secondary-carousel" data-slide-to="1"></li>
+							<li data-target="#secondary-carousel" data-slide-to="2"></li>
+					</ol>
+		
+		
+					<div class="carousel-inner">
+							<!--Con la clase carousel-item controlamos cada uno de los items (imagenes) de forma individual-->
+							<div class="carousel-item active">
+								<img class="d-block w-100" src="../img/carousel1.jpg" alt="First slide">
+								<div class="carousel-caption d-none d-md-block">
+									<h5>Aca Vemos una imagen poetica</h5>
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea sit alias laudantium error
+									</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="../img/carousel2.jpg" alt="Second slide">
+								<!--agregamos el texto despues de la imagen-->
+								<div class="carousel-caption d-none d-md-block">
+									<h5>Aca Vemos una imagen poetica</h5>
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea sit alias laudantium error
+									</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="../img/carousel3.jpg" alt="Third slide">
+								<!--agregamos el texto despues de la imagen-->
+								<div class="carousel-caption d-none d-md-block">
+									<h5>Aca Vemos una imagen poetica</h5>
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea sit alias laudantium error</p>
+								</div>
+							</div>
+					</div>
+		
+					<a class="carousel-control-prev" href="#secondary-carousel" role="button" data-slide="prev">
+							<!--Agregamos el icono de la flecha-->
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+					</a>
+		
+					<a class="carousel-control-next" href="#secondary-carousel" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+		<!--Carousel con animaciones leves, sin indicadores-->
+		
+		<div class="row mt-3">
+				<div class="col-12 mt-4">
+	
+					<div id="third-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+				
+						
+						<div class="carousel-inner">
+								<!--Con la clase carousel-item controlamos cada uno de los items (imagenes) de forma individual-->
+								<div class="carousel-item active">
+									<img class="d-block w-100" src="../img/carousel1.jpg" alt="First slide">
+									<div class="carousel-caption d-none d-md-block">
+										<h5>Aca Vemos una imagen poetica</h5>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea sit alias laudantium error
+										</p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<img class="d-block w-100" src="../img/carousel2.jpg" alt="Second slide">
+									<!--agregamos el texto despues de la imagen-->
+									<div class="carousel-caption d-none d-md-block">
+										<h5>Aca Vemos una imagen poetica</h5>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea sit alias laudantium error
+										</p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<img class="d-block w-100" src="../img/carousel3.jpg" alt="Third slide">
+									<!--agregamos el texto despues de la imagen-->
+									<div class="carousel-caption d-none d-md-block">
+										<h5>Aca Vemos una imagen poetica</h5>
+										<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea sit alias laudantium error</p>
+									</div>
+								</div>
+						</div>
+			
+						<a class="carousel-control-prev" href="#third-carousel" role="button" data-slide="prev">
+								<!--Agregamos el icono de la flecha-->
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+						</a>
+			
+						<a class="carousel-control-next" href="#third-carousel" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+		</div>
+	</div>
+	
+	<script src="../jquery/jquery-3.3.1.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Formularios Grid</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row mt-3">
+
+			<!--Columna principal-->
+			<div class="col">
+
+				<form action="">
+
+					<!--Aplicamos la clase form-group junto a la clase row
+					para crear forms groups en filas, dentros de ellos van cada input
+					en forma de columnas-->
+					<div class="form-group row">
+
+						<!--el form control del nombre  y password, ocupan dos columnas:
+						una al lado de la otra, en la misma fila.
+						En su tamaño mediano en adelante ocuparan 6 cols y en dispositivos pequeños 12
+						-->
+						<div class="col-12 col-md-6 mb-3">
+							<label for="nombre">Nombre</label>
+							<input type="text" class="form-control" placeholder="Nombre" name="nombre" id="nombre">
+						</div>
+
+						<div class="col-12 col-md-6 mb-3">
+							<label for="pass">Contraseña</label>
+							<input type="password" class="form-control" placeholder="Contraseña" name="pass" id="pass">
+						</div>
+					</div>
+
+					<!--Nueva fila para contener al area de mensajes y el pais-->
+
+					<div class="form-group row">
+
+						<!--el form de mensaje ocupa 6 de las 12 columnas dispuestas-->
+						<div class="col-12 col-md-6 mb-3">
+							<label for="mensaje">Mensaje</label>
+							<textarea name="mensaje" id="mensaje" class="form-control"></textarea>
+						</div>
+
+						<!--el form check del sexo ocupa 3 de las 6 columnas restantes-->
+						<div class="col-12 col-md-3 mb-3">
+
+							<label>Sexo</label>
+							<div class="form-check">
+								<label class="form-check-label">
+									<input type="radio" name="sexo" id="hombre" class="form-check-input mr-2">Hombre
+								</label>
+							</div>
+
+							<div class="form-check">
+								<label class="form-check-label">
+									<input type="radio" name="sexo" id="mujer" class="form-check-input mr-2">Mujer
+								</label>
+							</div>
+						</div>
+
+						<!--este form ocupa los 3 restantes de un total de 12 cols-->
+						<div class="col-12 col-md-3 mb-3">
+							<label for="pais">Pais</label>
+							<select name="pais" id="pais" class="form-control">
+								<option value="mexico">Mexico</option>
+								<option value="espana">España</option>
+								<option value="colombia">Colombia</option>
+							</select>
+						</div>
+					</div>
+
+
+					<div class="form-group row">
+
+						<div class="col-12 text-center">
+							<label class="form-check-label mb-3">
+								<input type="checkbox" name="terminos" id="terminos" class="form-check-input mr-2">Acepto Terminos y Condiciones
+							</label>
+
+							<div class="row justify-content-center">
+								<div class="col-12 col-sm-9 col-md-4">
+									<button class="btn btn-primary btn-block" type="submit">Enviar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

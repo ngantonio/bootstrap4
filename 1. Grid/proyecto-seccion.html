@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Maquetacion Grid</title>
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    
+    <style>
+        body{background: #f0f3f5; color: #fff }
+        /*con el margin top, hacemos que se separe 20 del borde del navegador;*/
+        header{background: #9aca40; padding: 20px; margin-bottom: 25px}
+    
+        .main-container{margin-bottom: 20px; }
+        main{ background: #fff; color: #424242; padding: 20px 0;}
+        aside{background: #dee5e8; padding: 60px 0; color: #0d47a1; margin-bottom: 25px;}
+        
+        .widgets{background: #f2f2f2; color: #424242; margin-bottom: 20px;}
+        
+        .widgets > div{ background: #2196f3; color: #fff; padding: 20px;}
+        footer{ padding: 20px 0; background: #1e1e1e;}
+
+   </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <!--fila 1: Header-->
+        <header class="row">
+            <div class="col">
+                <h1>Application Header </h1>
+            </div>
+        </header>
+
+        <!--Fila 2: Contenido main y Sidebar-->
+        <section class="row main-container">
+
+            <!--El contendio de main, tendra 8 columnas de un tamanño medio en adelante-->
+            <main class="col-12 col-md-8 ">
+                <h2>Main Content</h2>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, soluta beatae!
+                 Maiores officia aut quia reiciendis temporibus atque esse pariatur aliquam a laborum 
+                 nostrum voluptates debitis cumque est, ex repellendus! consectetur adipisicing elit.
+                Unde, soluta beatae! Maiores officia aut quia reiciendis temporibus atque esse pariatur
+                 aliquam a laborum  
+                </p>
+
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, soluta beatae!
+                    Maiores officia aut quia reiciendis temporibus atque esse pariatur aliquam a laborum 
+                    nostrum voluptates debitis cumque est, ex repellendus!
+                </p>
+            </main>
+
+            <!--Columna 2. sidebar, en dispositivos medianos en adelante tendrá un tamaño
+            de 4 columnas (8+4 = 12) y en dispositivos mas pequeños, será de 12.
+        
+            como la columna aside, abarca todo el alto de su contenedor padre (section) (por defecto)
+            queremos modificar ese comportamiento y central verticalmente el aside de forma que ocupe
+            solo lo que necesite, para ello ocupamos la clase align-self-center-->
+           
+            <aside class="col-12 col-md-4 align-self-center">
+                <h3 class="text-center">Aside</h3>
+            </aside>
+
+        </section>
+
+        <!--Nueva fila, en una seccion de widgets-->
+        <!-- Separamos cada una de las columnas dividiendo el espacio restante entre ellas-->
+        <section class="row widgets justify-content-between">
+
+            <!--Cada una de estas cajas, en un tamaño extra pequeño ocupara 12 columnas
+                en un tamaño mediano en adelante, ocupará 4 columnas y en un tamaño grande en adelante, 3 columnas-->
+            
+            <div class="col-12 col-md-4 col-lg-3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, soluta beatae!
+                   Maiores officia aut quia reiciendis temporibus atque esse pariatur aliquam a laborum 
+                   nostrum voluptates debitis cumque est, ex repellendus! consectetur adipisicing elit
+                </p>   
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, soluta beatae!
+                Maiores officia aut quia reiciendis temporibus atque esse pariatur aliquam a laborum 
+                nostrum voluptates debitis cumque est, ex repellendus! consectetur adipisicing elit.
+                </p>   
+             </div>
+
+             <div class="col-12 col-md-4 col-lg-3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, soluta beatae!
+                   Maiores officia aut quia reiciendis temporibus atque esse pariatur aliquam a laborum 
+                   nostrum voluptates debitis cumque est, ex repellendus! consectetur adipisicing elit. 
+                </p>   
+            </div>
+        </section>
+
+        <!--Nueva fila, para el footer-->
+        <footer class="row"> 
+            <div class="col-12 text-center">
+                <h3>Footer</h3>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

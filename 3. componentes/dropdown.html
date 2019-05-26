@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Dropdown</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	
+</head>
+<body>
+
+
+	<div class="container">
+
+		<h2>Los dropdowns requieren la libreria pooper.js</h2>
+
+		<div class="row mt-3">
+			<div class="col-6">
+				<!--Todos los dropdown tienen la clase dropdown-->
+
+				<div class="dropdown">
+
+					<!--Creamos el boton con la clase dropdown-toggle, 
+					de tal forma que al presionar, haga un toggle 
+					
+					la propiedad data-toggle, le indica a boostrasp que al presionar trabajará con
+					el efecto de dropdown-->
+
+						<button class="btn btn-primary dropdown-toggle" 
+								type="button" 
+								id="drop1" 
+								data-toggle="dropdown" 
+								aria-haspopup="true" 
+								aria-expanded="false">
+						Single Dropdown 
+						</button>
+
+						<!--Finalmente, agregamos un div con la clase dropdown-menu que 
+							se va a encargar de ocultar el menu de enlaces o items, los cuales tendran
+							la  case dropdown-item -->
+
+						<div class="dropdown-menu" aria-labelledby="drop1">
+							<a class="dropdown-item" href="#">html>/a>
+							<a class="dropdown-item" href="#">css</a>
+							<a class="dropdown-item" href="#">js</a>
+
+						</div>
+				</div>
+ 
+				<!--Dropdown con titulo-->
+
+				<div class="dropdown btn-group mr-2 mb-2 mt-3">
+
+					<button class="btn btn-primary dropdown-toggle"
+							 id="dp-categorias"
+							 data-toggle="dropdown">
+							 Categorias con titulo
+					</button>
+					
+					<div class="dropdown-menu" aria-labelledby="dp-categorias">
+						
+						<!--Podemos agregar un titulo-->
+						<h6 class="dropdown-header">Categorias</h6>
+						<!--Los items de ese titulo-->
+						<a href="#" class="dropdown-item">HTML</a>
+						<a href="#" class="dropdown-item">CSS</a>
+						<a href="#" class="dropdown-item">JS</a>
+						<!--separador-->
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item">Bootstrap</a>
+					</div>
+
+				</div>
+
+
+				<div class="btn-group mr-2 mb-2">
+
+					<button class="btn btn-default dropdown-toggle" id="dp-categorias2" data-toggle="dropdown">Categorias</button>
+					<div class="dropdown-menu" aria-labelledby="dp-categorias2">
+						
+						<h6 class="dropdown-header">Categorias</h6>
+						<a href="#" class="dropdown-item">HTML</a>
+						<a href="#" class="dropdown-item">CSS</a>
+						<a href="#" class="dropdown-item">JS</a>
+						
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item">Bootstrap</a>
+					</div>
+				</div>
+
+
+				<!--Botones con separaciones entre el boton y la flecha
+				la flecha despliega el menu-->
+		
+		<div class="row mt-3">
+			<div class="col-12">
+
+				<div class="btn-group mr-2 mb-2">
+					<!--separamos el boton de categorias y la flecha, la cual
+					metemos dentro de un nuevo boton-->
+
+					<button class="btn btn-primary">Categorias</button>
+
+					<!--creamos el boton que tendra solo la flecha y el split-->
+					<button class="btn btn-primary dropdown-toggle dropdown-toggle-split" id="dp-categorias" data-toggle="dropdown">
+						<span class="sr-only">Menu</span>
+					</button>
+					
+
+					<div class="dropdown-menu" aria-labelledby="dp-categorias">
+						<h6 class="dropdown-header">Categorias</h6>
+						<a href="#" class="dropdown-item">HTML</a>
+						<a href="#" class="dropdown-item">CSS</a>
+						<a href="#" class="dropdown-item">JS</a>
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item">Bootstrap</a>
+					</div>
+				</div>
+
+
+				<!--de aqui para abajo es lo mismo que el anterior pero con sitindos colores-->
+				<div class="btn-group mr-2 mb-2">
+
+					<button class="btn btn-default">Categorias</button>
+					
+					<button class="btn btn-default dropdown-toggle dropdown-toggle-split" id="dp-categorias2" data-toggle="dropdown">
+						<span class="sr-only">Menu</span>
+					</button>
+
+					<div class="dropdown-menu" aria-labelledby="dp-categorias2">
+						<h6 class="dropdown-header">Categorias</h6>
+						<a href="#" class="dropdown-item">HTML</a>
+						<a href="#" class="dropdown-item">CSS</a>
+						<a href="#" class="dropdown-item">JS</a>
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item">Bootstrap</a>
+					</div>
+				</div>
+
+				<div class="btn-group mr-2 mb-2">
+
+					<button class="btn btn-success">Categorias</button>
+					
+					<button class="btn btn-success dropdown-toggle dropdown-toggle-split" id="dp-categorias3" data-toggle="dropdown">
+						<span class="sr-only">Menu</span>
+					</button>
+					
+					<div class="dropdown-menu" aria-labelledby="dp-categorias3">
+						<h6 class="dropdown-header">Categorias</h6>
+						<a href="#" class="dropdown-item">HTML</a>
+						<a href="#" class="dropdown-item">CSS</a>
+						<a href="#" class="dropdown-item">JS</a>
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item">Bootstrap</a>
+					</div>
+				</div>
+
+				<div class="btn-group mr-2 mb-2">
+
+					<button class="btn btn-info">Categorias</button>
+					<button class="btn btn-info dropdown-toggle dropdown-toggle-split" id="dp-categorias4" data-toggle="dropdown">
+						<span class="sr-only">Menu</span>
+					</button>
+
+					<div class="dropdown-menu" aria-labelledby="dp-categorias4">
+						<h6 class="dropdown-header">Categorias</h6>
+						<a href="#" class="dropdown-item">HTML</a>
+						<a href="#" class="dropdown-item">CSS</a>
+						<a href="#" class="dropdown-item">JS</a>
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item">Bootstrap</a>
+					</div>
+				</div>
+
+				<div class="btn-group mr-2 mb-2">
+
+					<button class="btn btn-warning">Categorias</button>
+					<button class="btn btn-warning dropdown-toggle dropdown-toggle-split" id="dp-categorias5" data-toggle="dropdown">
+						<span class="sr-only">Menu</span>
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dp-categorias5">
+						<h6 class="dropdown-header">Categorias</h6>
+						<a href="#" class="dropdown-item">HTML</a>
+						<a href="#" class="dropdown-item">CSS</a>
+						<a href="#" class="dropdown-item">JS</a>
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item">Bootstrap</a>
+					</div>
+				</div>
+
+				<div class="btn-group mr-2 mb-2">
+					<button class="btn btn-danger">Categorias</button>
+					<button class="btn btn-danger dropdown-toggle dropdown-toggle-split" id="dp-categorias6" data-toggle="dropdown">
+						<span class="sr-only">Menu</span>
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dp-categorias6">
+						<h6 class="dropdown-header">Categorias</h6>
+						<a href="#" class="dropdown-item">HTML</a>
+						<a href="#" class="dropdown-item">CSS</a>
+						<a href="#" class="dropdown-item">JS</a>
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item">Bootstrap</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row mt-3">
+			<div class="col-6">
+
+				<div class="btn-group dropup mr-2 mb-2">
+					<button class="btn btn-primary btn-sm dropdown-toggle" id="dp-categorias" data-toggle="dropdown">Categorias</button>
+					
+					<div class="dropdown-menu" aria-labelledby="dp-categorias">
+						<h6 class="dropdown-header">Categorias</h6>
+						<a href="#" class="dropdown-item">HTML</a>
+						<a href="#" class="dropdown-item">CSS</a>
+						<a href="#" class="dropdown-item">JS</a>
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item">Bootstrap</a>
+					</div>
+				</div>
+
+				<div class="btn-group mr-2 mb-2">
+
+					<button class="btn btn-sm btn-primary">Categorias</button>
+					<button class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split" id="dp-categorias" data-toggle="dropdown">
+						<span class="sr-only">Menu</span>
+					</button>
+					
+
+					<div class="dropdown-menu" aria-labelledby="dp-categorias">
+						<h6 class="dropdown-header">Categorias</h6>
+						<a href="#" class="dropdown-item">HTML</a>
+						<a href="#" class="dropdown-item">CSS</a>
+						<a href="#" class="dropdown-item">JS</a>
+						<div class="dropdown-divider"></div>
+						<a href="#" class="dropdown-item">Bootstrap</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	<script src="../jquery/jquery-3.3.1.min.js"></script>
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+	
+</body>
+</html>

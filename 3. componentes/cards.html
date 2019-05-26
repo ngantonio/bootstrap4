@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cards</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row mt-3">
+			<div class="col">
+				<div class="card">
+					<div class="card-body">
+						<h1 class="mb-3">Encabezado</h1>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Clases que podemos utilizar
+		.card 				Establecemos que trabajaremos con una tarjeta (card)
+			.card-body		Establecemos el cuerpo de la tarjeta		
+				.card-title 	Establecemos el un texto como titulo de la card
+				.card-subtitle 	Establecemos un subtitulo para la card
+				.card-text 		Establecemos el texto de la card.
+				.card-link  	Establecemos un enlace como boton en la card
+				.card-img-top 		Establecemos una imagen para la card en la parte superior
+				.card-img-bottom 	Establecemos una imagen para la card en la parte inferior
+		-->
+
+		<!--Todo lo que tenga la clase pb, es para que se le agregue un padding a la card
+		y no quede el ultimo elemento tan pegado del borde-->
+
+
+		<!--fila, con margen superior de 3em para que se separe un poco de la card anterior-->
+		<div class="row mt-3">
+
+			<div class="col-6">
+				<div class="card">
+					<div class="card-body">
+						<!--card-img-top para que la imagen esté al inicio y img-fluid para que se ajuste al tamaño de la columna-->
+						<img src="../img/bg.jpg" class="card-img-top img-fluid" alt="">
+						
+						<h3 class="card-title">Titulo</h3>
+						
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium similique vero perferendis dolorem in libero id omnis, esse nesciunt corrupti?</p>
+						<!--Boton grande en forma de bloque  y enlace, ocupa el contenedor-->
+						<a href="#" class="btn btn-primary btn-lg btn-block">Boton</a>		
+					</div>
+				</div>
+			</div>
+
+			<div class="col-6">
+				<div class="card">
+					<div class="card-body">
+						<img src="../img/bg.jpg" class="card-img-top img-fluid" alt="">
+						<h5 class="card-title">Titulo</h5>
+						<h6 class="card-subtitle mb-2 text-muted">Subtitulo</h6>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a href="#" class="card-link">Enlace #1</a>
+						<a href="#" class="card-link">Enlace #2</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mt-4">
+			<div class="col">
+				<div class="card">
+					<!--Cuando queremos que tenga un encabezado-->
+					<div class="card-header">
+						Encabezado de la Card
+					</div>
+					<div class="card-body">
+						<h3 class="card-title">Lorem ipsum dolor.</h3>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, quibusdam.</p>
+						<a href="#" class="btn btn-primary">Ir al post</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="card">
+					<div class="card-body text-center">
+						<h3 class="card-title">Lorem ipsum dolor.</h3>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, quibusdam.</p>
+						<a href="#" class="btn btn-primary">Ir al post</a>
+					</div>
+					<div class="card-footer">
+							Encabezado de la Card en forma de footer
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<br>
+		<h3>Cards con background</h3>
+
+		<!--para tener mas informacion de todos los colores, la clase bg- los muestra-->
+		<div class="row mt-4">
+
+			<div class="col-12 col-md-4">
+
+				<div class="card text-white bg-primary mb-3">
+					<div class="card-header">Headeddr</div>
+					<div class="card-body">
+						<h5 class="card-title">Secondary card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					</div>
+				</div>
+			</div> 
+			
+			<div class="col-12 col-md-4">
+				<div class="card text-white bg-secondary mb-3">
+					<div class="card-header">Header</div>
+						<div class="card-body">
+							<h5 class="card-title">Secondary card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-md-4">
+				<div class="card text-white bg-success mb-3" >
+					<div class="card-header">Header</div>
+						<div class="card-body">
+							<h5 class="card-title">Secondary card title</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-12 col-md-4" >
+				<div class="card text-white bg-dark mb-3" >
+					<div class="card-header">Header</div>
+					<div class="card-body">
+						<h5 class="card-title">Dark card title</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					</div>
+				</div>		
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-12 col-md-4">
+					<div class="card bg-dark text-white">
+						<img class="card-img" src="../img/bg.jpg" alt="Card image">
+						<div class="card-img-overlay">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							<p class="card-text">Last updated 3 mins ago</p>
+						</div>
+					</div>
+			</div>
+		</div>
+</div>
+ 
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
